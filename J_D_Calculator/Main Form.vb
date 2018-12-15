@@ -1,6 +1,6 @@
-﻿' Name:         Concert Project
-' Purpose:      Displays the subtotal, discount, and total due for concert tickets.
-' Programmer:   <your name> on <current date>
+﻿' Name:         Calculator
+' Purpose:      Lets users perform calculations with numbers for basic operations.
+' Programmer:   José L Dávila
 
 Option Explicit On
 Option Infer Off
@@ -9,11 +9,17 @@ Option Strict On
 Public Class frmMain
     Private strConcatenatedNumber As String
     Private strCurrentNumber As String
+    Private strCurrentNumber2 As String
     Private dblTotal As Double
+    Private intButtonPress As Integer = 0
 
-    Private Function GetSum(ByVal dblNum As Double) As Double
+    Private Function GetSum(ByVal dblNum As Double, ByVal dblNum2 As Double) As Double
+        If dblTotal = 0 Then
+            dblTotal = dblNum + dblNum2
+        Else
+            dblTotal = dblNum + dblTotal
+        End If
 
-        dblTotal = dblNum + dblTotal
         Return dblTotal
     End Function
 
@@ -47,60 +53,63 @@ Public Class frmMain
             btn6.Click, btn7.Click, btn8.Click, btn9.Click, btn0.Click
 
         Dim strNumber As String
-
         Dim btnCurrent As Button = CType(sender, Button)
+
         strNumber = btnCurrent.Tag.ToString
         strConcatenatedNumber = strConcatenatedNumber & strNumber
         txtOuput.Text = strConcatenatedNumber
-
+        strCurrentNumber = txtOuput.Text
     End Sub
 
+
+    'Add code to reset other operators flags when another operator is selected.'
+    Private Sub btnOperators_Click(sender As Object, e As EventArgs) Handles _
+             btnAddition.Click, btnSubtraction.Click, btnMultiplication.Click,
+             btnDivision.Click
+
+        Dim btnCurrent As Button = CType(sender, Button)
+
+        Select Case btnCurrent.Name
+            Case = "btnAddition"
+                intButtonPress = 1
+                strCurrentNumber = strCurrentNumber2
+                strCurrentNumber2 = txtOuput.Text
+                strConcatenatedNumber = Nothing
+            Case = "btnSubtraction"
+                intButtonPress = 2
+            Case = "btnMultiplication"
+                intButtonPress = 3
+            Case = "btnDivision"
+                intButtonPress = 4
+        End Select
+    End Sub
+
+    Private Sub btnEquals_Click(sender As Object, e As EventArgs) Handles btnEquals.Click
+        Dim dblNumber As Double
+        Dim dblNumber2 As Double
+
+        Select Case intButtonPress
+            Case = 1
+                Double.TryParse(strCurrentNumber, dblNumber)
+                Double.TryParse(strCurrentNumber2, dblNumber2)
+                dblTotal = GetSum(dblNumber, dblNumber2)
+            Case = 2
+
+            Case = 3
+
+            Case = 4
+        End Select
+        txtOuput.Text = dblTotal.ToString
+        strCurrentNumber = Nothing
+        strCurrentNumber2 = Nothing
+        strConcatenatedNumber = Nothing
+    End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         txtOuput.Text = String.Empty
         strConcatenatedNumber = Nothing
         strCurrentNumber = Nothing
+        strCurrentNumber2 = Nothing
         dblTotal = Nothing
-    End Sub
-
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        Me.Close()
-    End Sub
-
-    Private Sub btnEquals_Click(sender As Object, e As EventArgs) Handles _
-        btnEquals.Click, btnAddition.Click, btnSubtraction.Click, btnMultiplication.Click,
-             btnDivision.Click
-
-        Dim dblTotal As Double
-        Dim dblNumber As Double
-        Dim btnCurrent As Button = CType(sender, Button)
-
-        Select Case btnCurrent.Name
-            Case = "btnAddition"
-                strCurrentNumber = txtOuput.Text
-                strConcatenatedNumber = Nothing
-                txtOuput.Text = String.Empty
-                Double.TryParse(strCurrentNumber, dblNumber)
-                dblTotal = GetSum(dblNumber)
-            Case = "btnSubtraction"
-                strCurrentNumber = txtOuput.Text
-                strConcatenatedNumber = Nothing
-                txtOuput.Text = String.Empty
-                Double.TryParse(strCurrentNumber, dblNumber)
-                dblTotal = GetSubtraction(dblNumber)
-            Case = "btnMultiplication"
-                strCurrentNumber = txtOuput.Text
-                strConcatenatedNumber = Nothing
-                txtOuput.Text = String.Empty
-                Double.TryParse(strCurrentNumber, dblNumber)
-                dblTotal = GetMultiplication(dblNumber)
-            Case = "btnDivision"
-                strCurrentNumber = txtOuput.Text
-                strConcatenatedNumber = Nothing
-                txtOuput.Text = String.Empty
-                Double.TryParse(strCurrentNumber, dblNumber)
-                dblTotal = GetDivision(dblNumber)
-        End Select
-        txtOuput.Text = dblTotal.ToString
     End Sub
 End Class
