@@ -51,7 +51,7 @@ Partial Class frmMain
         Me.btn0.Location = New System.Drawing.Point(79, 201)
         Me.btn0.Name = "btn0"
         Me.btn0.Size = New System.Drawing.Size(32, 30)
-        Me.btn0.TabIndex = 10
+        Me.btn0.TabIndex = 11
         Me.btn0.Tag = "0"
         Me.btn0.Text = "0"
         Me.btn0.UseVisualStyleBackColor = True
@@ -62,7 +62,7 @@ Partial Class frmMain
         Me.btn1.Location = New System.Drawing.Point(79, 93)
         Me.btn1.Name = "btn1"
         Me.btn1.Size = New System.Drawing.Size(32, 30)
-        Me.btn1.TabIndex = 1
+        Me.btn1.TabIndex = 2
         Me.btn1.Tag = "1"
         Me.btn1.Text = "1"
         Me.btn1.UseVisualStyleBackColor = True
@@ -73,7 +73,7 @@ Partial Class frmMain
         Me.btn2.Location = New System.Drawing.Point(117, 93)
         Me.btn2.Name = "btn2"
         Me.btn2.Size = New System.Drawing.Size(32, 30)
-        Me.btn2.TabIndex = 2
+        Me.btn2.TabIndex = 3
         Me.btn2.Tag = "2"
         Me.btn2.Text = "2"
         Me.btn2.UseVisualStyleBackColor = True
@@ -84,7 +84,7 @@ Partial Class frmMain
         Me.btn3.Location = New System.Drawing.Point(41, 129)
         Me.btn3.Name = "btn3"
         Me.btn3.Size = New System.Drawing.Size(32, 30)
-        Me.btn3.TabIndex = 3
+        Me.btn3.TabIndex = 4
         Me.btn3.Tag = "3"
         Me.btn3.Text = "3"
         Me.btn3.UseVisualStyleBackColor = True
@@ -95,7 +95,7 @@ Partial Class frmMain
         Me.btn9.Location = New System.Drawing.Point(41, 201)
         Me.btn9.Name = "btn9"
         Me.btn9.Size = New System.Drawing.Size(32, 30)
-        Me.btn9.TabIndex = 9
+        Me.btn9.TabIndex = 10
         Me.btn9.Tag = "9"
         Me.btn9.Text = "9"
         Me.btn9.UseVisualStyleBackColor = True
@@ -106,7 +106,7 @@ Partial Class frmMain
         Me.btn8.Location = New System.Drawing.Point(117, 165)
         Me.btn8.Name = "btn8"
         Me.btn8.Size = New System.Drawing.Size(32, 30)
-        Me.btn8.TabIndex = 8
+        Me.btn8.TabIndex = 9
         Me.btn8.Tag = "8"
         Me.btn8.Text = "8"
         Me.btn8.UseVisualStyleBackColor = True
@@ -117,7 +117,7 @@ Partial Class frmMain
         Me.btn7.Location = New System.Drawing.Point(79, 165)
         Me.btn7.Name = "btn7"
         Me.btn7.Size = New System.Drawing.Size(32, 30)
-        Me.btn7.TabIndex = 7
+        Me.btn7.TabIndex = 8
         Me.btn7.Tag = "7"
         Me.btn7.Text = "7"
         Me.btn7.UseVisualStyleBackColor = True
@@ -128,7 +128,7 @@ Partial Class frmMain
         Me.btn6.Location = New System.Drawing.Point(41, 165)
         Me.btn6.Name = "btn6"
         Me.btn6.Size = New System.Drawing.Size(32, 30)
-        Me.btn6.TabIndex = 6
+        Me.btn6.TabIndex = 7
         Me.btn6.Tag = "6"
         Me.btn6.Text = "6"
         Me.btn6.UseVisualStyleBackColor = True
@@ -139,7 +139,7 @@ Partial Class frmMain
         Me.btn5.Location = New System.Drawing.Point(117, 129)
         Me.btn5.Name = "btn5"
         Me.btn5.Size = New System.Drawing.Size(32, 30)
-        Me.btn5.TabIndex = 5
+        Me.btn5.TabIndex = 6
         Me.btn5.Tag = "5"
         Me.btn5.Text = "5"
         Me.btn5.UseVisualStyleBackColor = True
@@ -150,7 +150,7 @@ Partial Class frmMain
         Me.btn4.Location = New System.Drawing.Point(79, 129)
         Me.btn4.Name = "btn4"
         Me.btn4.Size = New System.Drawing.Size(32, 30)
-        Me.btn4.TabIndex = 4
+        Me.btn4.TabIndex = 5
         Me.btn4.Tag = "4"
         Me.btn4.Text = "4"
         Me.btn4.UseVisualStyleBackColor = True
@@ -161,7 +161,7 @@ Partial Class frmMain
         Me.btnClear.Location = New System.Drawing.Point(41, 93)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(32, 30)
-        Me.btnClear.TabIndex = 2
+        Me.btnClear.TabIndex = 17
         Me.btnClear.Text = "C"
         Me.btnClear.UseMnemonic = False
         Me.btnClear.UseVisualStyleBackColor = True
@@ -171,7 +171,7 @@ Partial Class frmMain
         Me.btnDivision.Location = New System.Drawing.Point(155, 93)
         Me.btnDivision.Name = "btnDivision"
         Me.btnDivision.Size = New System.Drawing.Size(32, 30)
-        Me.btnDivision.TabIndex = 3
+        Me.btnDivision.TabIndex = 13
         Me.btnDivision.Tag = "/"
         Me.btnDivision.Text = "/"
         Me.btnDivision.UseVisualStyleBackColor = True
@@ -181,7 +181,7 @@ Partial Class frmMain
         Me.btnMultiplication.Location = New System.Drawing.Point(155, 129)
         Me.btnMultiplication.Name = "btnMultiplication"
         Me.btnMultiplication.Size = New System.Drawing.Size(32, 30)
-        Me.btnMultiplication.TabIndex = 4
+        Me.btnMultiplication.TabIndex = 14
         Me.btnMultiplication.Tag = "*"
         Me.btnMultiplication.Text = "X"
         Me.btnMultiplication.UseVisualStyleBackColor = True
@@ -191,7 +191,7 @@ Partial Class frmMain
         Me.btnSubtraction.Location = New System.Drawing.Point(155, 165)
         Me.btnSubtraction.Name = "btnSubtraction"
         Me.btnSubtraction.Size = New System.Drawing.Size(32, 30)
-        Me.btnSubtraction.TabIndex = 5
+        Me.btnSubtraction.TabIndex = 15
         Me.btnSubtraction.Tag = "-"
         Me.btnSubtraction.Text = "-"
         Me.btnSubtraction.UseVisualStyleBackColor = True
@@ -201,7 +201,7 @@ Partial Class frmMain
         Me.btnAddition.Location = New System.Drawing.Point(155, 201)
         Me.btnAddition.Name = "btnAddition"
         Me.btnAddition.Size = New System.Drawing.Size(32, 30)
-        Me.btnAddition.TabIndex = 6
+        Me.btnAddition.TabIndex = 16
         Me.btnAddition.Tag = "+"
         Me.btnAddition.Text = "+"
         Me.btnAddition.UseVisualStyleBackColor = True
@@ -212,7 +212,7 @@ Partial Class frmMain
         Me.btnEquals.Location = New System.Drawing.Point(117, 201)
         Me.btnEquals.Name = "btnEquals"
         Me.btnEquals.Size = New System.Drawing.Size(32, 30)
-        Me.btnEquals.TabIndex = 11
+        Me.btnEquals.TabIndex = 12
         Me.btnEquals.Tag = "="
         Me.btnEquals.Text = "="
         Me.btnEquals.UseVisualStyleBackColor = True
@@ -231,13 +231,13 @@ Partial Class frmMain
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
+        Me.FileToolStripMenuItem.Text = "&File"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
-        Me.ExitToolStripMenuItem.Text = "Exit"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'txtOuput
         '
@@ -246,7 +246,7 @@ Partial Class frmMain
         Me.txtOuput.Name = "txtOuput"
         Me.txtOuput.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtOuput.Size = New System.Drawing.Size(146, 29)
-        Me.txtOuput.TabIndex = 13
+        Me.txtOuput.TabIndex = 1
         Me.txtOuput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'frmMain
