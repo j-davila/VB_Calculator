@@ -19,33 +19,28 @@ Public Class frmMain
         Else
             dblTotal = dblNum + dblTotal
         End If
-
         Return dblTotal
     End Function
 
-    Private Function GetSubtraction(ByVal dblNum As Double) As Double
+    Private Function GetSubtraction(ByVal dblNum As Double, ByVal dblNum2 As Double) As Double
 
         If dblTotal = 0 Then
-            dblNum = -(dblNum)
+            dblTotal = dblNum2 - dblNum
+        Else
+            dblTotal = dblTotal - dblNum
         End If
-
-        dblTotal = dblTotal - dblNum
         Return dblTotal
     End Function
 
-    Private Function GetMultiplication(ByVal dblNum As Double) As Double
+    Private Function GetMultiplication(ByVal dblNum As Double, ByVal dblNum2 As Double) As Double
 
-        If dblTotal = 0 Then
-            dblTotal = 1
-        End If
-
-        dblTotal = dblNum * dblTotal
+        dblTotal = dblNum * dblNum2
         Return dblTotal
     End Function
 
-    Private Function GetDivision(ByVal dblNum As Double) As Double
+    Private Function GetDivision(ByVal dblNum As Double, ByVal dblNum2 As Double) As Double
 
-        dblTotal = dblTotal / dblNum
+        dblTotal = dblNum2 / dblNum
         Return dblTotal
     End Function
     Private Sub btn_click(sender As Object, e As EventArgs) Handles _
@@ -61,8 +56,6 @@ Public Class frmMain
         strCurrentNumber = txtOuput.Text
     End Sub
 
-
-    'Add code to reset other operators flags when another operator is selected.'
     Private Sub btnOperators_Click(sender As Object, e As EventArgs) Handles _
              btnAddition.Click, btnSubtraction.Click, btnMultiplication.Click,
              btnDivision.Click
@@ -77,10 +70,19 @@ Public Class frmMain
                 strConcatenatedNumber = Nothing
             Case = "btnSubtraction"
                 intButtonPress = 2
+                strCurrentNumber = strCurrentNumber2
+                strCurrentNumber2 = txtOuput.Text
+                strConcatenatedNumber = Nothing
             Case = "btnMultiplication"
                 intButtonPress = 3
+                strCurrentNumber = strCurrentNumber2
+                strCurrentNumber2 = txtOuput.Text
+                strConcatenatedNumber = Nothing
             Case = "btnDivision"
                 intButtonPress = 4
+                strCurrentNumber = strCurrentNumber2
+                strCurrentNumber2 = txtOuput.Text
+                strConcatenatedNumber = Nothing
         End Select
     End Sub
 
@@ -94,10 +96,17 @@ Public Class frmMain
                 Double.TryParse(strCurrentNumber2, dblNumber2)
                 dblTotal = GetSum(dblNumber, dblNumber2)
             Case = 2
-
+                Double.TryParse(strCurrentNumber, dblNumber)
+                Double.TryParse(strCurrentNumber2, dblNumber2)
+                dblTotal = GetSubtraction(dblNumber, dblNumber2)
             Case = 3
-
+                Double.TryParse(strCurrentNumber, dblNumber)
+                Double.TryParse(strCurrentNumber2, dblNumber2)
+                dblTotal = GetMultiplication(dblNumber, dblNumber2)
             Case = 4
+                Double.TryParse(strCurrentNumber, dblNumber)
+                Double.TryParse(strCurrentNumber2, dblNumber2)
+                dblTotal = GetDivision(dblNumber, dblNumber2)
         End Select
         txtOuput.Text = dblTotal.ToString
         strCurrentNumber = Nothing
